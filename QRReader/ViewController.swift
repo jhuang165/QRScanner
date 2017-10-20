@@ -35,7 +35,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects:[Any]!, from connection: AVCaptureConnection!) {
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if metadataObjects.count > 0 {
             let machineReadableCode = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
             if machineReadableCode.type == AVMetadataObject.ObjectType.qr {
