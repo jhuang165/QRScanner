@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Of9-UA-hDS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Of9-UA-hDS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5f3-ZU-Hxc"/>
+                            <constraint firstAttribute="trailing" secondItem="Of9-UA-hDS" secondAttribute="trailing" id="Tql-bL-YSX"/>
+                            <constraint firstItem="Of9-UA-hDS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qi1-UK-rfe"/>
+                            <constraint firstItem="Of9-UA-hDS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rH7-OR-hnT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="videoPreview" destination="Of9-UA-hDS" id="Kz2-rI-u4x"/>
+                        <segue destination="jxj-k6-EGN" kind="show" identifier="openLink" id="etw-a4-5hW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="3pc-Ra-NyB">
+            <objects>
+                <viewController id="jxj-k6-EGN" customClass="WebViewController" customModule="QRReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jmt-1r-Wie">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DmG-zB-hen">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DmG-zB-hen" firstAttribute="top" secondItem="jmt-1r-Wie" secondAttribute="top" id="3dQ-gJ-g19"/>
+                            <constraint firstItem="DmG-zB-hen" firstAttribute="bottom" secondItem="mlN-3k-uVJ" secondAttribute="bottom" id="8vG-wI-Elv"/>
+                            <constraint firstAttribute="trailing" secondItem="DmG-zB-hen" secondAttribute="trailing" id="Jbd-4J-vJU"/>
+                            <constraint firstItem="DmG-zB-hen" firstAttribute="leading" secondItem="jmt-1r-Wie" secondAttribute="leading" id="hMm-7b-GtJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mlN-3k-uVJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="DmG-zB-hen" id="x6t-WU-jib"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgJ-GW-sxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.79999999999995" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
